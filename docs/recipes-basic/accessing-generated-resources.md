@@ -8,10 +8,6 @@ There are times when you may need to drop down a level to perform some operation
 
 This section provides several ways of accessing the underlying L1 and L2 AppSync API and DynamoDB constructs.
 
-Note that this is subject to change as [**improvements are made**](https://github.com/aws-amplify/amplify-category-api/pull/1756).
-
-> 🚨 As improvements are made, this section is likely the most subject to change.
-
 ## AppSync
 
 ```ts
