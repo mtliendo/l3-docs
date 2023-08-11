@@ -15,18 +15,25 @@ Note that this is subject to change as [**improvements are made**](https://githu
 ## AppSync
 
 ```ts
+// access the L2 construct
+amplifyApi.resources.graphqlApi.addDynamoDbDataSource()
+```
+
+![l3 to l2 appsync api](../img/l3-to-l2-appsync.png)
+
+```ts
 // access the L1 construct
 amplifyApi.resources.cfnGraphqlApi.xrayEnabled = true
 ```
 
+## DynamoDB
+
 ```ts
 // access the L2 construct
-const appSyncApi = appsync.GraphqlApi.fromGraphqlApiAttributes(this, 'api', {
-	graphqlApiId: amplifyApi.resources.cfnGraphqlApi.attrApiId,
-})
+amplifyApi.resources.tables['RecipeTable'].tableArn
 ```
 
-## DynamoDB
+![l3 to l2 appsync dynamodb](../img/l3-to-l2-dynamodb.png)
 
 ```ts
 // access the L1 construct
